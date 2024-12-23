@@ -1,0 +1,133 @@
+<head>
+    <style>
+        /* ナビゲーションバー */
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: left;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            border-radius: 0; /* 丸みをなくす */
+        }
+
+        
+        /* リストのスタイル */
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            gap: 15px; /* リンク間のスペースを設定 */
+        }
+        nav ul{
+            display: flex; /* 横並び */
+        }
+        /* リストアイテム */
+        nav ul li {
+            list-style: none;
+            width: 130px; /* 各アイテムの固定幅 */
+            overflow: hidden;
+            flex: 1;
+            margin: 0 10px; /* 左右に10pxの余白を追加 */
+            border-radius: 20px;
+        }
+
+        /* リンクのスタイル */
+        nav ul li a {
+            display: flex; /* 中央揃えのため */
+            justify-content: center;
+            flex-direction: column; /* 縦方向に配置 */
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 10px 20px; /* 内側の余白を調整 */
+            text-decoration: none;
+            color: #b0d371;
+            font-weight: bold;
+            transition: color 0.3s;
+            position: relative;
+            z-index: 1;
+            border-radius: 20px;
+        }
+
+        /* 背景エフェクト */
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            right: 0%;
+            width: 300%;
+            height: 100%;
+            background: linear-gradient(to left, #fff 34%, #ffe575 34%, #6cc6db 66%, #b0d371 66%);
+            z-index: -1;
+            transition: right 0.6s;
+        }
+
+        /* ホバー効果 */
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        nav ul li a:hover::after {
+            right: -200%;
+        }
+
+        /* ロゴ */
+        .logo {
+            display: flex;
+            align-items: center; /* 垂直方向に中央揃え */
+            gap: 10px; /* 画像と文字の間にスペースを設定 */
+            font-size: 25px; /* テキストサイズ */
+            color: #b0d371; /* 初期文字色 */
+            transition: color 0.3s; /* 色変更のアニメーション */
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none; /* 下線を削除 */
+            color: inherit; /* 親要素の色を継承 */
+        }
+
+        .logo img {
+            height: 45px;
+        }
+
+        /* アイコンのスタイル */
+        nav ul li a img {
+            height: 60px; /* アイコンサイズ */
+            margin-bottom: 5px;
+        }
+
+        /* 問い合わせボタン */
+        .contact-button {
+            background-color: #b0d371;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #c0392b;
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <a><img src="logo.png" alt="Chiba Event Calendar">Chiba Event Calendar</a>
+    </div>
+    <ul>
+        <li><a href="index.html"><img src="home.png" alt="ホーム">ホーム</a></li>
+        <li><a href="p1.html"><img src="group.png" alt="グループ">グループ</a></li>
+        <li><a href="p2.html"><img src="member.png" alt="メンバー">メンバー</a></li>
+    </ul>
+    <button class="contact-button">お問い合わせ</button>
+</nav>
+</body>

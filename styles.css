@@ -1,0 +1,337 @@
+/* スタートアニメーション */
+.logo_fadein {
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_fadein p {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* 初期状態で非表示 */
+    z-index: 9999;
+    width: 280px;
+
+    /* Flexbox を使用して中央配置 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    margin: 0;
+    padding: 20px; /* 画面端から全体的に20pxの余白を設定 */
+    background-color: #f5f5f5; /* 背景色を設定（オプション） */
+    font-family: Arial, sans-serif; /* フォントを統一 */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* 中央揃え */
+    margin: 0 auto; /* 左右の中央揃え */
+    padding: 20px; /* 内側に余白を設定 */
+    max-width: 90%; /* 幅を制限して中央に余裕を持たせる */
+}
+
+.image-container img {
+    width: 100%; /* 画像の幅を調整 */
+    max-width: 1200px; /* 最大幅を制限 */
+    height: auto; /* アスペクト比を保つ */
+}
+
+
+/* ヘッダー部分のデザイン */
+.header {
+    background-color: rgba(255, 255, 255, 0.8); /* 背景を半透明に設定 */
+    padding: 20px;
+    border-bottom: 2px solid #A6CE39; /* 緑色の線を追加 */
+}
+
+.header h1 {
+    font-size: 48px;
+    color: #A6CE39; /* 緑色 */
+    margin: 0;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 36px;
+    color: #A6CE39; /* 緑色 */
+    justify-content: center; /* 中央揃え */
+    margin: 20px auto; /* 左右の中央揃え */
+    font-weight: bold; 
+    text-align:center;
+}
+
+.header p {
+    font-size: 24px;
+    color: #666;
+    margin: 10px 0 0;
+}
+
+/* 説明文のデザイン */
+.description {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+    width: 80%;
+    border-radius: 10px; /* 角を丸める */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+
+.description p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+.calendar-container {
+    display: flex;               /* Flexboxを有効化 */
+    justify-content: center;     /* 水平方向に中央揃え */
+    align-items: center;         /* 垂直方向に中央揃え（必要に応じて） */
+    margin: 20px auto;           /* 上下の余白を追加し、左右は自動調整 */
+    padding: 20px;               /* 内側に余白を追加 */
+    max-width: 90%;              /* 横幅を画面幅に応じて制限 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    border-radius: 8px;          /* 角を丸くする */
+    background-color: #fff;      /* 背景色を白に */
+}
+
+.calendar-container iframe {
+    width: 100%;                /* 幅を100%に調整 */
+    max-width: 1200px;          /* 最大幅を設定 */
+    height: 600px;              /* 高さを指定 */
+    border: none;               /* ボーダーを削除 */
+}
+
+
+/* リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* リストのスタイル */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 15px; /* リンク間のスペースを設定 */
+}
+
+
+/* 動画 */
+video {
+    max-width: 100%;
+    max-height: 100vh;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    background-color: #fff;
+    
+}
+
+.blue-box {
+    background-color: #00afcc; /* 背景色を青に設定 */
+    color: white; /* テキスト色を白に設定 */
+    padding: 30px 80px 30px 80px; /* 内側の余白を設定 */
+    border-radius: 8px; /* 角を丸く */
+    max-width: 1200px; /* 最大幅を設定 */
+    margin: 20px auto; /* 上下に余白、中央揃え */
+    font-size: 16px; /* フォントサイズを調整 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* コンテンツ全体に影を追加 */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.blue-box ul {
+    list-style: none; /* リストマーカーを非表示 */
+    padding: 0; /* 余白をリセット */
+    margin: 0; /* 余白をリセット */
+}
+.blue-box li:last-child {
+    margin-bottom: 0; /* 最後の項目の余白を削除 */
+}
+.blue-box li {
+    display: block; /* 各リストアイテムをブロック要素として扱う */
+    margin-bottom: 10px; /* 各項目の間に余白を追加 */
+    font-size: 25px; /* フォントサイズを調整 */
+}
+.blue-box li strong {
+    display: inline-block; /* ラベルを独立したブロック要素に */
+    margin-right: 10px; /* ラベルと値の間に余白を追加 */
+    font-weight: bold; /* 太字 */
+}
+.blue-box span {
+    text-align: left; /* 内容部分を左揃え */
+    flex-grow: 1; /* 必要に応じて幅を拡張 */
+    margin-left: 10px; /* ラベルと内容の間に余白を追加 */
+    word-wrap: break-word; /* 長い内容を折り返す */
+}
+
+/* 背景動画のスタイル */
+.background-video {
+    position: absolute; /* 他の要素の背面に配置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 動画の比率を保ちながら埋める */
+    z-index: -1; /* 背景として他の要素の背面に表示 */
+    opacity: 0.6; /* 動画の透明度 */
+}
+
+/* blue-boxの配置とサイズ調整 */
+.blue-box {
+    position: relative; /* 子要素の絶対配置を可能にする */
+    overflow: hidden; /* 動画がはみ出ないようにする */
+    width: 100%;
+    height: 100vh; /* ビューポート全体をカバー */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* その他の要素のスタイリング */
+.center-image {
+    position: relative; /* 動画の上に表示される */
+    z-index: 1; /* 動画より前に配置 */
+}
+
+.blue-text {
+    position: relative;
+    z-index: 1; /* 動画より前に配置 */
+    color: red;
+    text-align: center;
+}
+/* 背景動画のスタイリング */
+.background-video {
+    position: fixed; /* 背景に固定 */
+    top: 0;
+    left: 0;
+    width: 100vw; /* ビューポート幅全体 */
+    height: 100vh; /* ビューポート高さ全体 */
+    object-fit: cover; /* 動画を比率を保ちながら画面全体に拡大 */
+    z-index: -1; /* 背景に移動 */
+    opacity: 0.6; /* 透明度 */
+}
+
+/* ボタンのスタイル */
+.detail-button {
+    justify-content: center;     /* 水平方向に中央揃え */
+    align-items: center;         /* 垂直方向に中央揃え（必要に応じて） */
+    margin: 20px auto;           /* 上下の余白を追加し、左右は自動調整 */
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detail-button:hover {
+    background-color: darkred;
+}
+       
+h1 {
+    font-size: 40px; /* 見出しのフォントサイズを大きく */
+    margin: 50px auto; /* 見出しと内容の間の余白を増やす */
+    font-weight: bold; /* 太字に */
+    max-width: 1200px; /* 最大幅を設定 */
+    text-align:center
+}
+h2 {
+    font-size: 30px; /* 見出しのフォントサイズを大きく */
+    margin-bottom: 20px; /* 見出しと内容の間の余白を増やす */
+    font-weight: bold; /* 太字に */
+    text-align: center; /* テキストを左寄せ */
+}
+h3 {
+    font-size: 30px; /* 見出しのフォントサイズを大きく */
+    margin: 20px auto; /* 見出しと内容の間の余白を増やす */
+    
+    max-width: 1200px; /* 最大幅を設定 */
+    text-align:center;
+}
+
+
+
+/* ポップアップ */
+#popup {
+    width: 700px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: auto;
+        margin: 5px 0;
+    }
+
+    #popup {
+        width: 90%;
+    }
+
+    .blue-box, .white-box, .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .blue-box li, .white-box li {
+        font-size: 18px;
+    }
+
+    .calendar-container iframe {
+        width: 100%; /* スマホでは画面幅に合わせる */
+        height: 500px; /* 高さも調整 */
+    }
+}
+
+
+#popup-content {
+    max-height: 300px; /* 最大高さを設定 */
+    overflow-y: auto; /* 内容が多い場合スクロール */
+}
+
+
+#popup-close {
+    color: #333;
+}
+
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+}

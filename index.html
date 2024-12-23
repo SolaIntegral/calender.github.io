@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiba Event Calendar</title>
+</head>
+<body>
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="video.mp4" type="video/mp4">
+        <!-- 他のフォーマットの動画を追加可能 -->
+        お使いのブラウザは動画再生に対応していません。
+    </video>
+
+    <div class="image-container">
+    <img src="indexmain.png">
+    </div>
+    <div class="header">
+        <h1>Chiba Event Calendar</h1>
+    </div>
+
+    <h4>家族向けイベント情報</h4>
+
+    <div class="description">
+        <p>千葉イベントカレンダーは、家族で楽しめるイベント情報を提供するカレンダーです。</p>
+    </div>
+
+    <div class="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/embed?src=d27439e17bdbcda610970a86f2c22d906b35451c9a370a31d116375c318ac32b%40group.calendar.google.com&ctz=Asia%2FTokyo" 
+            style="border: 0" 
+            width="800" 
+            height="600" 
+            frameborder="0" 
+            scrolling="no">
+        </iframe>
+    </div>
+    
+
+    <div id="content">
+
+        <div class="blue-box" style="background-color: #fff;">
+            <h2 style="color: black;">イベント主催者の皆さん！</h2>
+            <h3 style="color: black;">
+                2024年12月31日 19:00  グーグルフォームの入力お願いします。
+            </h3>
+            <button class="detail-button">詳細</button>
+        </div>
+
+        <div class="blue-box" style="background-color: #fff;">
+            <h2 style="color: black;">私たちのサイトについて</h2>
+            <h3 style="color: black;">
+            千葉イベントカレンダーは、子供向けのイベント情報を提供するために設立されました。私たちは地域のイベント情報を広く共有し、子供たちとその家族が楽しい時間を過ごせるよう支援しています。
+            </h3>        
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
